@@ -2,11 +2,9 @@ package practicum2b;
 
 public class Voetbalclub {
     private String naam;
-    private int punten;
     private int gewonnen;
     private int gelijk;
     private int verloren;
-    private int gespeeld;
     public Voetbalclub(String nm){
         naam = nm;
     }
@@ -19,15 +17,15 @@ public class Voetbalclub {
             verloren = verloren + 1;
     }
     public int aantalPunten(){
-        punten = gewonnen * 3 + gelijk;
+        int punten = gewonnen * 3 + gelijk;
         return punten;
     }
     public int aantalGespeeld(){
-        gespeeld = gewonnen + gelijk + verloren;
+        int gespeeld = gewonnen + gelijk + verloren;
         return gespeeld;
     }
 
     public String toString(){
-        return naam+ "   " + aantalGespeeld() + " " + gewonnen + " "+ gelijk +" "+ verloren+" " + punten;
+        return naam+ "   " + aantalGespeeld() + " " + gewonnen + " "+ gelijk +" "+ verloren+" " + aantalPunten();
     }
 }
